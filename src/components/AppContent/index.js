@@ -7,7 +7,7 @@ import Chip from '@material-ui/core/Chip'
 
 import arrowLogo from '../../static/images/arrow.png';
 
-export const AppContent = ({data,isLoading}) => {
+export const AppContent = ({data,isLoading,updateSearch}) => {
     var cardHeader = null;
     var cardBody = null;
     var cardFooter = null;
@@ -33,7 +33,7 @@ export const AppContent = ({data,isLoading}) => {
                                   <div className={styles.ingredientsList}>
                                       {
                                          ingredientsArr.map((item,i) => (
-                                             <Chip style={{marginBottom:'0.55em',marginRight:"0.55em"}} key={i} label={item} onDelete={()=>null}/>
+                                             <Chip onClick={(event)=>updateSearch(event,item)} style={{marginBottom:'0.55em',marginRight:"0.55em"}} key={i} label={item} onDelete={()=>null}/>
                                          ))
                                       }
                                   </div>

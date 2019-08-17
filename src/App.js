@@ -13,6 +13,7 @@ class App extends React.PureComponent {
     this.state = {appData:[],searchText:"",isLoading:true}
     this.loadContent = this.loadContent.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.updateSearch = this.updateSearch.bind(this);
   }
 
   componentDidMount() {
@@ -26,6 +27,18 @@ class App extends React.PureComponent {
   handleSearch = (event) => {
     event.preventDefault();
     this.setState({searchText:event.target.value})
+  }
+
+  updateSearch = (event,newvalue) => {
+    event.preventDefault();
+       const newAppData = this.state.appData.filter((obj)=>obj.ingredients.includes(newvalue));
+       console.log(newAppData);
+    this.setState((prev)=>{
+      return {
+        searchText: prev.searchText+", "+newvalue,
+        appData: newAppData
+      }
+    });
   }
 
   loadContent = (event) => {
@@ -49,9 +62,9 @@ class App extends React.PureComponent {
     return (
         <>
           <Header text={"Recipe Search"} subText={"A search engine to find their recipes by the ingredients"}>
-            <Search onclickLoad={this.loadContent} onChangeHandleSearch={this.handleSearch} />
+            <Search defaultValue={this.state.searchText} onclickLoad={this.loadContent} onChangeHandleSearch={this.handleSearch} />
           </Header>
-          <AppContent data={this.state.appData} isLoading={this.state.isLoading} />
+          <AppContent data={this.state.appData} updateSearch={this.updateSearch} isLoading={this.state.isLoading} />
         </>
     )
   }
