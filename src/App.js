@@ -30,12 +30,13 @@ class App extends React.PureComponent {
 
   loadContent = (event) => {
     event.preventDefault();
+    var proxyUrl = "https://cors-anywhere.herokuapp.com/";
     var endpoint = `/api/?i=${this.state.searchText}&p=1`;
     if(process.env.REACT_APP_API_URL)
     {
       endpoint = `${process.env.REACT_APP_API_URL}/api/?i=${this.state.searchText}&p=1`
     }
-      axios.get(endpoint).then((res)=>{
+      axios.get(proxyUrl+endpoint).then((res)=>{
         this.setState({appData:res.data.results,isLoading:false})
       }).catch((err)=>{
         console.log(err.message);
