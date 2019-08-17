@@ -1,0 +1,11 @@
+@import "../../app.global";
+
+.centerContainer {
+  width: 100%;
+  position: relative;
+  padding: 1em;
+  @include AlignCenter;
+  align-items: center;
+  z-index: 90;
+  height: max-content;
+}

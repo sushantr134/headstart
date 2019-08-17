@@ -1,0 +1,35 @@
+@import "../../app.global";
+
+.innerSearchContainer
+{
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  z-index: 100;
+  @include AlignCenter;
+  align-items: center;
+  input
+  {
+    padding: 1em 1.3em;
+    text-align: left;
+    border-radius: 2em;
+    outline: 0;
+    border:0.55px solid grey;
+    width: 100%;
+    background: white;
+    box-shadow: inset 0 0 0 0.8px lightgrey;
+  }
+}
+.buttonInnerSearch
+{
+  position: absolute;
+  right: 3%;
+  border-radius: 2em !important;
+  width: 20% !important;
+  min-width: 80px;
+  background: #717171 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1.044em !important;
+  font-size: 11px !important;
+}

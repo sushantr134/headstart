@@ -1,0 +1,49 @@
+@import "../../app.global";
+
+.headerContent
+{
+  width: 100%;
+  @include GridMaker(repeat(auto-fit,minmax(300px,1fr)),none,1em);
+  padding:1% 7% 1% 7%;
+  justify-items: center;
+  color: $primary-text-color;
+}
+
+.headerLeft
+{
+  width: 100%;
+  h1
+  {
+    letter-spacing: 0.6px;
+    padding-top: 0.35em;
+    margin-bottom: 0.35em;
+  }
+}
+.headerRight
+{
+  width: 100%;
+}
+
+.imagesContainer
+{
+  width: 100%;
+  @include GridMaker(repeat(auto-fit,minmax(150px,1fr)),none,0.3em);
+  justify-items: flex-end;
+}
+
+img
+{
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.searchWithHeader
+{
+  position: absolute;
+  width: 50%;
+  bottom: -1.5em;
+  z-index: 1001;
+  left: 7%;
+}

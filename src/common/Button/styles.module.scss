@@ -1,0 +1,27 @@
+@import "../../app.global";
+
+.Button {
+  width: 100%;
+  max-width: 250px;
+  padding: 0.8em;
+  text-align: center;
+  @include AlignCenter;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  outline: 0;
+  line-height: 1;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+
+  &:hover
+  {
+    background: black;
+  }
+
+}
+
+.Primary {
+  background: #8f8f8f;
+  color: white;
+}

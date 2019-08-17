@@ -1,0 +1,50 @@
+@import "../../app.global";
+
+.card {
+   width: 100%;
+   max-width: 250px;
+   min-height: 300px;
+   height: 100%;
+   box-shadow: 2px 1px 10px 0px #8f8f8f;
+   background: white;
+   @include AlignTop;
+   align-items: center;
+  position: relative;
+  flex-direction: column;
+
+}
+
+.cardHeader {
+width: inherit;
+  padding: 1em;
+  h2
+  {
+    font-size: 1.2rem;
+    text-align: left;
+    color: #686868;
+  }
+}
+
+.cardBody {
+  width: inherit;
+  padding: 1em;
+  h4
+  {
+    font-size: 0.88rem;
+    text-align: left;
+    padding-left: 0.1em;
+    color: #686868;
+    text-transform: uppercase;
+  }
+}
+.line
+{
+  padding: 0.2em;
+  width: 100%;
+  background: #c8c8c8;
+
+}
+
+.cardFooter {
+  width: inherit;
+}
