@@ -30,6 +30,7 @@ class App extends React.PureComponent {
 
   loadContent = (event) => {
     event.preventDefault();
+
     axios.get(`/api/?i=${this.state.searchText}&p=1`).then((res)=>{
       this.setState({appData:res.data.results,isLoading:false})
     }).catch((err)=>{

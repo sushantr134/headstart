@@ -35,6 +35,13 @@
     cursor: pointer;
     margin-right: 0.6em;
     text-transform: uppercase;
+
+    img {
+      width: 100%;
+      max-width: 23px;
+      height: 19px;
+      object-fit: contain;
+    }
   }
 
 }

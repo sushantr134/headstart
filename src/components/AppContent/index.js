@@ -5,6 +5,8 @@ import {Card} from "../../common/Card";
 import styles from './styles.module.scss';
 import Chip from '@material-ui/core/Chip'
 
+import arrowLogo from '../../static/images/arrow.png';
+
 export const AppContent = ({data,isLoading}) => {
     var cardHeader = null;
     var cardBody = null;
@@ -42,7 +44,7 @@ export const AppContent = ({data,isLoading}) => {
                                 <a href={cardObj.href} target={"_blank"}>
                                     <button className={styles.ingredientsFooter}>
                                         <span>View Recipe</span>
-                                        <span>-></span>
+                                        <span><img src={arrowLogo} alt={"arrowLogo"}/></span>
                                     </button>
                                 </a>
 
