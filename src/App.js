@@ -10,19 +10,43 @@ class App extends React.PureComponent {
   constructor(props)
   {
     super(props);
-    this.state = {appData:[],searchText:"",isLoading:true}
+    this.state = {appData:[],searchText:"",isLoading:true,index:1,height:730}
     this.loadContent = this.loadContent.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.updateSearch = this.updateSearch.bind(this);
+    this.loadMore = this.loadMore.bind(this);
+    this.iScroll = React.createRef();
+  }
+
+  loadMore()
+  {
+    this.setState((prev)=>{
+      return {
+        index:prev.index+1
+      }
+    })
   }
 
   componentDidMount() {
-    // axios.get('/api/?i=onions,garlic&p=3').then((res)=>{
-    //   this.setState({appData:res.data.results})
-    // }).catch((err)=>{
-    //   console.log(err.message);
-    // })
+    console.log(this.iScroll);
+    if(this.iScroll.current !== undefined)
+    {
+      console.log(this.iScroll);
+      this.iScroll.current.addEventListener("scroll", () => {
+        if (this.iScroll.current.scrollTop + this.iScroll.current.clientHeight >= this.iScroll.current.scrollHeight){
+          this.loadMore();
+        }
+      });
+    }
   }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if(prevState.index !== this.state.index)
+    {
+      this.loadContent();
+    }
+  }
+
 
   handleSearch = (event) => {
     event.preventDefault();
@@ -36,21 +60,21 @@ class App extends React.PureComponent {
     this.setState((prev)=>{
       return {
         searchText: prev.searchText+", "+newvalue,
-        appData: newAppData
+        appData: [...prev.appData,...newAppData]
       }
     });
   }
 
   loadContent = (event) => {
-    event.preventDefault();
+    //event.preventDefault();
     var proxyUrl = "https://cors-anywhere.herokuapp.com/";
-    var endpoint = `/api/?i=${this.state.searchText}&p=1`;
+    var endpoint = `/api/?i=${this.state.searchText}&p=${this.state.index}`;
     if(process.env.REACT_APP_API_URL)
     {
-      endpoint = `${process.env.REACT_APP_API_URL}/api/?i=${this.state.searchText}&p=1`
+      endpoint = `${process.env.REACT_APP_API_URL}/api/?i=${this.state.searchText}&p=${this.state.index}`
     }
       axios.get(proxyUrl+endpoint).then((res)=>{
-        this.setState({appData:res.data.results,isLoading:false})
+        this.setState(prev =>{return {appData:[...prev.appData,...res.data.results],isLoading:false}})
       }).catch((err)=>{
         console.log(err.message);
       })
@@ -60,12 +84,12 @@ class App extends React.PureComponent {
   render()
   {
     return (
-        <>
+        <div ref={this.iScroll} style={{ height: "730px", overflow: "auto"}}>
           <Header text={"Recipe Search"} subText={"A search engine to find their recipes by the ingredients"}>
             <Search defaultValue={this.state.searchText} onclickLoad={this.loadContent} onChangeHandleSearch={this.handleSearch} />
           </Header>
-          <AppContent data={this.state.appData} updateSearch={this.updateSearch} isLoading={this.state.isLoading} />
-        </>
+            <AppContent loadMore={this.loadMore} data={this.state.appData} updateSearch={this.updateSearch} isLoading={this.state.isLoading} />
+        </div>
     )
   }
 

@@ -7,11 +7,12 @@ import Chip from '@material-ui/core/Chip'
 
 import arrowLogo from '../../static/images/arrow.png';
 
-export const AppContent = ({data,isLoading,updateSearch}) => {
+export const AppContent = ({data,isLoading,updateSearch,loadMore}) => {
     var cardHeader = null;
     var cardBody = null;
     var cardFooter = null;
     var ingredientsArr = [];
+
     return (
         <CenterContainer>
             {
