@@ -1,0 +1,53 @@
+@import "../../app.global";
+
+.landingContainer
+{
+  width: 100%;
+  height: 120vh;
+  max-height:730px;
+  padding: 1em;
+  @include AlignCenter;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top:0;
+  z-index: 1100;
+  background: rgba(1,1,1,0.5);
+
+  p
+  {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+}
+
+@keyframes upToDown {
+  from{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.animatePara
+{
+  transform: translateY(100%) !important;
+  opacity: 0 !important;
+  transition: transform ease-out 1s,opacity ease-out 0.88s;
+}
+
+.animateContainer
+{
+  background: transparent !important;
+  z-index: initial !important;
+  transition: all ease-out 1s;
+}
+

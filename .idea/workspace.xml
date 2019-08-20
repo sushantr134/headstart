@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ccf022a-3cea-4636-8371-91078e55618d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/LandingPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LandingPage/styles.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Button/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Button/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Button/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Card/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Card/styles.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AppContent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppContent/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppContent/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppContent/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Center/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Center/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -29,6 +44,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="SCSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -78,7 +95,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566028183702</updated>
-      <workItem from="1566028185158" duration="25470000" />
+      <workItem from="1566028185158" duration="25569000" />
+      <workItem from="1566071627560" duration="137000" />
+      <workItem from="1566073321832" duration="9000" />
+      <workItem from="1566283022034" duration="7384000" />
     </task>
     <servers />
   </component>
@@ -90,7 +110,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
