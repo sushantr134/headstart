@@ -6,6 +6,11 @@
   padding: 1% 7% 1% 7%;
   justify-items: center;
   color: $primary-text-color;
+  @media screen and (max-width: $mob-endpoint-max-width) {
+    & {
+      padding: 5% 7% 5% 7%;
+    }
+  }
 }
 
 .headerLeft {
@@ -20,6 +25,12 @@
 
 .headerRight {
   width: 100%;
+
+  @media screen and (max-width: $mob-endpoint-max-width) {
+    & {
+      display: none;
+    }
+  }
 }
 
 .imagesContainer {
@@ -41,4 +52,10 @@ img {
   bottom: -1.5em;
   z-index: 1001;
   left: 7%;
+  opacity: 0;
+}
+
+.animateHeaderSearch {
+  opacity: 1 !important;
+  transition: opacity cubic-bezier(1, 0, 0, 1) 1.88s;
 }

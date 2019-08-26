@@ -1,11 +1,16 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
 }
 
 $primary-text-color: #f1eded;
+
+$mob-endpoint-max-width: 550px;
 
 /*-------Common Mixins Definition-------*/
 
@@ -27,7 +32,7 @@ $primary-text-color: #f1eded;
   flex-direction: column-reverse;
 }
 
-@mixin GridMaker($cols,$rows,$gap) {
+@mixin GridMaker($cols, $rows, $gap) {
   display: grid;
   grid-template-columns: $cols;
   grid-template-rows: $rows;
@@ -42,5 +47,4 @@ $primary-text-color: #f1eded;
   z-index: 99;
   background: rgba(1, 1, 1, 0.4);
   height: 100vh;
-
 }
