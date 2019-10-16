@@ -1,2 +1,4 @@
-<h1>Deployed App Link</h1>
-<a href="https://heuristic-meninsky-a772b7.netlify.com/">visit link</a>
+# Recipe Search
+A search engine to find their recipes by the ingredients.
+
+[Click here to visit deployed link!](https://heuristic-meninsky-a772b7.netlify.com/)
